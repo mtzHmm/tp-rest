@@ -1,0 +1,11 @@
+{
+  "produits": [
+    { "id": 1, "nom": "Clavier gamer", "prix": 89.90, "stock": 7 },
+    { "id": 4, "nom": "Casque", "prix": 79.90, "stock": 8 },
+    { "id": 5, "nom": "Webcam", "prix": 39.90, "stock": 15 }
+  ],
+  "utilisateurs": [
+    { "id": 1, "nom": "Amira", "email": "amira@test.tn" },
+    { "id": 2, "nom": "Karim", "email": "karim@test.tn" }
+  ]
+}

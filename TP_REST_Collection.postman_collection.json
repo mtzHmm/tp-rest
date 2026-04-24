@@ -1,0 +1,204 @@
+{
+  "info": {
+    "name": "TP REST — Ma première API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Lister les produits",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/produits",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["produits"]
+        }
+      }
+    },
+    {
+      "name": "Détail d'un produit",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/produits/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["produits", "1"]
+        }
+      }
+    },
+    {
+      "name": "Produit introuvable (404)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/produits/999",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["produits", "999"]
+        }
+      }
+    },
+    {
+      "name": "Créer un produit (Webcam)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nom\": \"Webcam\",\n  \"prix\": 39.90,\n  \"stock\": 15\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": {
+          "raw": "http://localhost:3000/produits",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["produits"]
+        }
+      }
+    },
+    {
+      "name": "Modifier un produit (PUT)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nom\": \"Clavier gamer\",\n  \"prix\": 89.90,\n  \"stock\": 7\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": {
+          "raw": "http://localhost:3000/produits/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["produits", "1"]
+        }
+      }
+    },
+    {
+      "name": "Supprimer un produit (DELETE)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/produits/3",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["produits", "3"]
+        }
+      }
+    },
+    {
+      "name": "Créer utilisateur Hichem",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nom\": \"Hichem\",\n  \"email\": \"hichem@test.tn\"\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": {
+          "raw": "http://localhost:3000/utilisateurs",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["utilisateurs"]
+        }
+      }
+    },
+    {
+      "name": "Lister les utilisateurs",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/utilisateurs",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["utilisateurs"]
+        }
+      }
+    },
+    {
+      "name": "Modifier email Hichem (PUT)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nom\": \"Hichem\",\n  \"email\": \"hichem.nouveau@test.tn\"\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": {
+          "raw": "http://localhost:3000/utilisateurs/3",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["utilisateurs", "3"]
+        }
+      }
+    },
+    {
+      "name": "Récupérer Hichem par id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/utilisateurs/3",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["utilisateurs", "3"]
+        }
+      }
+    },
+    {
+      "name": "Supprimer Hichem (DELETE)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/utilisateurs/3",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["utilisateurs", "3"]
+        }
+      }
+    },
+    {
+      "name": "Vérifier suppression Hichem (404)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/utilisateurs/3",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["utilisateurs", "3"]
+        }
+      }
+    }
+  ]
+}
